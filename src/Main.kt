@@ -152,9 +152,9 @@ fun monkeyCounter(monkeyList: List<String>): String {
  * Returns the name of the monkey
  */
 fun longestMonkeyName(monkeyList: List<String>): String {
-    if monkeyList.isNotEmpty() {
+    if (monkeyList.isEmpty()) {
         return "no monkeys"
-    } else{
+    } else {
         var longestName: Int = monkeyList[0].length
         for ((_, monkey) in monkeyList.withIndex()) {
             if (monkey.length > longestName) longestName = monkey.length
